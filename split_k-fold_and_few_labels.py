@@ -19,7 +19,7 @@ def load_folds_data(np_data_path, n_folds):
 
 
 
-data_dir = r"np"
+data_dir = "/kaggle/working/eval_ssl_ssc/data"#r"np"
 main_output_dir = "folds_data"
 n_folds = 5
 files = os.listdir(data_dir)
