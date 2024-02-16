@@ -21,14 +21,14 @@ def load_folds_data(np_data_path, n_folds):
 
 data_dir = "/kaggle/working/eval_ssl_ssc/data"#r"np"
 main_output_dir = "folds_data"
-n_folds = 5
+n_folds = 4
 files = os.listdir(data_dir)
 files = np.array([os.path.join(data_dir, i) for i in files if ".npz" in i])
 files.sort()
 
 
 folds = load_folds_data(data_dir, n_folds)
-few_lbl_percentages = [1, 5, 10, 50, 75]
+few_lbl_percentages = [1, 5, 10, 50]#, 75]
 
 for fold_id in range(len(folds)):
     for percentage in few_lbl_percentages:
